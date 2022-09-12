@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "mirchi",
+      "email": "sawgath123@gmail.com",
+      "mobile": "8766900325",
+      "address": "hyd",
+      "services": "biryani"
+    },
+    {
+      "id": 2,
+      "name": "Swagath",
+      "email": "sawgath123@gmail.com",
+      "mobile": "8766900325",
+      "address": "hyd",
+      "services": "biryani"
+    },
+    {
+      "id": 5,
+      "name": "Test",
+      "email": null,
+      "mobile": null,
+      "address": null,
+      "services": null
+    }
+  ],
+  "signup": [
+    {
+      "name": "Test",
+      "email": "Test@email.com",
+      "mobile": "8796330188",
+      "password": "Test123456",
+      "id": 1
+    },
+    {
+      "name": "Test1234",
+      "email": "Test1234@email.com",
+      "mobile": "Test1234",
+      "password": "Test1234",
+      "id": 2
+    }
+  ]
+}
