@@ -8,12 +8,18 @@
                 </div>
                 <form [formGroup]="loginForm" (ngSubmit)="logIn()">
                     <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input formControlName="email" type="email" class="form-control">
+                        <label class="form-label">Email<span class="text-danger">*</span></label>
+                        <input formControlName="email" type="email" class="form-control" [ngClass]="{'input-error': isEmail()}">
+                        <div class="error">
+                            Email is required.
+                          </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input formControlName="password" type="password" class="form-control">
+                        <label class="form-label">Password<span class="text-danger">*</span></label>
+                        <input formControlName="password" maxlength="50" type="password" class="form-control" [ngClass]="{'input-error': isPassword()}">
+                        <div class="error">
+                            Password is required.
+                          </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>

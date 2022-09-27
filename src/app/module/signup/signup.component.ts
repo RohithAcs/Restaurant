@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,27 +11,32 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
 
   signupForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder, private _http:HttpClient , private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private _http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      name: [''],
-      email: [''],
-      mobile: [''],
-      password: ['']
+      name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      mobile: new FormControl('', [Validators.required]),
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(5),
+        Validators.required,
+        Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$') //this is for the letters (both uppercase and lowercase) and numbers validation
+      ]))
     })
   }
 
-  signUp(){
-    this._http.post<any>("http://localhost:3000/signup",this.signupForm.value).subscribe({ next: (res: any) => {
-      alert("Registration Successfull");
-      this.signupForm.reset();
-      this.router.navigate(['login']);
-    },
-    error: (err: any) =>{
-      alert(err.message);
-    }
-  })
+  signUp() {
+    this._http.post<any>("http://localhost:3000/signup", this.signupForm.value).subscribe({
+      next: (res: any) => {
+        alert("Registration Successfull");
+        this.signupForm.reset();
+        this.router.navigate(['login']);
+      },
+      error: (err: any) => {
+        alert(err.message);
+      }
+    })
   }
 
 }

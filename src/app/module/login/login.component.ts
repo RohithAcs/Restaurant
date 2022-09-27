@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,9 +15,29 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuiler.group({
-      email: [''],
-      password: ['']
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(5),
+        Validators.required,
+        Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$') //this is for the letters (both uppercase and lowercase) and numbers validation
+      ]))
     })
+  }
+
+  isEmail() {
+    if (this.loginForm.get('email')?.value != '') {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  isPassword() {
+    if (this.loginForm.get('password')?.value != '') {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   logIn() {

@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "mirchi",
-      "email": "sawgath123@gmail.com",
-      "mobile": "8766900325",
-      "address": "hyd",
-      "services": "biryani"
-    },
-    {
       "id": 2,
       "name": "Swagath",
       "email": "sawgath123@gmail.com",
@@ -17,12 +9,12 @@
       "services": "biryani"
     },
     {
-      "id": 5,
-      "name": "Test",
-      "email": null,
-      "mobile": null,
-      "address": null,
-      "services": null
+      "id": 3,
+      "name": "Swagath",
+      "email": "swagath@email.com",
+      "mobile": "7895421368",
+      "address": "address",
+      "services": "tea"
     }
   ],
   "signup": [
@@ -39,6 +31,13 @@
       "mobile": "Test1234",
       "password": "Test1234",
       "id": 2
+    },
+    {
+      "name": "Sai",
+      "email": "sai123@gmail.com",
+      "mobile": "8756423147",
+      "password": "sai123",
+      "id": 3
     }
   ]
 }

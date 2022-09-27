@@ -7,3 +7,15 @@
   top: 15%;
   left: 35%;
 }
+
+.error{
+  display: none;
+}
+.ng-dirty.ng-invalid + .error, 
+.input-error + .error{
+  display: block;
+  color: red;
+}
+.input-error{
+  border: 1px solid red;
+}
