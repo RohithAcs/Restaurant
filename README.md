@@ -6,6 +6,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Mock Backend Server
+
+Run `npm run start:backend` to start the JSON server. The server will watch the `db.json` file and run at `http://localhost:3000/`.
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
@@ -13,6 +18,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Deployment
+
+Run `npm run deploy` to deploy the app to GitHub Pages. The app will be hosted at `https://RohithAcs.github.io/Restaurant`.
 
 ## Running unit tests
 

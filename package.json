@@ -2,9 +2,10 @@
   "name": "angular-tour-of-heroes",
   "version": "0.0.0",
   "homepage": "https://RohithAcs.github.io/Restaurant",
-    "scripts": {
+  "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:backend": "json-server --watch db.json --port 3000",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "deploy": "gh-pages -d dist/angular-tour-of-heroes",
@@ -42,6 +43,7 @@
     "@types/node": "^12.11.1",
     "gh-pages": "^6.3.0",
     "jasmine-core": "~4.0.0",
+    "json-server": "^1.0.0-beta.3",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
