@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './module/login/login.component';
-import { RestaurantDashComponent } from './module/restaurent-dash/restaurant-dash.component';
+import { RestaurantDashComponent } from './module/restaurant-dash/restaurant-dash.component';
 import { SignupComponent } from './module/signup/signup.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
