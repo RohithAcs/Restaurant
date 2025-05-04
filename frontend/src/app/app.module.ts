@@ -18,6 +18,7 @@ import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './module/partials/search/search.component';
 import { TagsComponent } from './module/partials/tags/tags.component';
 import { HeaderComponent } from './module/partials/header/header.component';
+import { OrderPageComponent } from './module/order-page/order-page.component';
 
 
 
@@ -33,7 +34,8 @@ import { HeaderComponent } from './module/partials/header/header.component';
     NotFoundComponent,
     SearchComponent,
     TagsComponent,
-    HeaderComponent
+    HeaderComponent,
+    OrderPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,12 @@
+/**
+ * ToDO: validations for the signup form
+ * 1. Name: required, min length 3, max length 20, only letters and spaces allowed
+ * 2. Email: required, valid email format
+ * 3. Mobile: required, valid mobile number format (10 digits)
+ * 4. Password: required, min length 5, max length 20, at least one uppercase letter, one lowercase letter, one number
+ * 5. Confirm Password: required, must match password
+ */
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';

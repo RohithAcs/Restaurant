@@ -1,3 +1,9 @@
+/**
+ * validation for the login form
+ * 1. Email: required, valid email format
+ * 2. Password: required, min length 5, max length 20, at least one uppercase letter, one lowercase letter, one number
+ */
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
